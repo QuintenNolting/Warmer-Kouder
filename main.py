@@ -73,5 +73,7 @@ def update_highscores(name, score, filename="highscores.txt"):
             f.write(f"{n} {s}\n")
 
     return scores
-
-
+    
+def vraag_speler_naam():
+    name = get_value("Please enter name}: ", str)
+    return name
