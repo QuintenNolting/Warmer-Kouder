@@ -77,3 +77,7 @@ def update_highscores(name, score, filename="highscores.txt"):
 def vraag_speler_naam():
     name = get_value("Please enter name}: ", str)
     return name
+
+def bereken_score(pogingen, iteration):
+    score = pogingen - iteration
+    return score
