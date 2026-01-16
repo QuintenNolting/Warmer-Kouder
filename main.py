@@ -1,7 +1,8 @@
 import random
 
 def pick_random_number(bereik):
-    random.randint(1, bereik)
+    random_number = random.randint(1, bereik)
+    return random_number
 
 def get_value(text, data_type):
     while True:
