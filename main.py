@@ -31,6 +31,26 @@ def pick_difficulty():
         bereik= 1000
 
     return pogingen, bereik
+  
+  
+def input_number(pogingen, random_number):
+    iteration = 0
+    while True:
+        iteration += 1
+
+        if iteration > pogingen:
+            print(f"je hebt geen guesses meer... het goede nummer was {random_number}")
+            return iteration
+
+        guess = get_value(f"Wat is je {iteration}e guess?: ", int)
+
+        if guess < random_number:
+            print("Die guess was koud... het nummer is hoger")
+        elif guess > random_number:
+            print("Die guess was warm... het nummer is lager")
+        else:
+            print("Je hebt het goed!!")
+            return iteration
     
 def update_highscores(name, score, filename="highscores.txt"):
     try:
