@@ -16,7 +16,7 @@ def pick_difficulty():
     print("Op welke difficulty wil je spelen?")
     print("1) makkelijk (10 pogingen, nummer tussen 1 en 100)")
     print("2) normaal (6 pogingen, nummer tussen 1 en 100)")
-    print("3) moeilijk (15 pogingen, nummer tussen 1 en 1000)")
+    print("3) moeilijk (10 pogingen, nummer tussen 1 en 1000)")
 
     choice = get_value("", int)
 
@@ -27,7 +27,7 @@ def pick_difficulty():
         pogingen= 6
         bereik = 100
     elif choice == 3:
-        pogingen = 15
+        pogingen = 10
         bereik= 1000
 
     return pogingen, bereik
@@ -54,7 +54,4 @@ def update_highscores(name, score, filename="highscores.txt"):
 
     return scores
 
-# -----------------------------------------------------------------------
-
-print(update_highscores(Name, Score))
 
