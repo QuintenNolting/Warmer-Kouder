@@ -1,7 +1,8 @@
 import random
 
 def pick_random_number(bereik):
-    random.randint(1, bereik)
+    random_number = random.randint(1, bereik)
+    return random_number
 
 def get_value(text, data_type):
     while True:
@@ -75,9 +76,16 @@ def update_highscores(name, score, filename="highscores.txt"):
     return scores
     
 def vraag_speler_naam():
-    name = get_value("Please enter name}: ", str)
+    name = get_value("Please enter name: ", str)
     return name
 
 def bereken_score(pogingen, iteration):
     score = pogingen - iteration
     return score
+
+pogingen, bereik = pick_difficulty()
+random_number = pick_random_number(bereik)
+iteration = input_number(pogingen, random_number)
+name = vraag_speler_naam()
+score = bereken_score(pogingen, iteration)
+update_highscores(name, score)
